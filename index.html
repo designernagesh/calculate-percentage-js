@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Percentage Calculate</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript: KeyCode Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@700;800;900&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+
+  <!-- Font Awsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <!-- Custom CSS Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
   <body>
-    <div class="container">
-      <div class="display-1 text-center my-4 text-danger">
-        Percentage Calculate
-      </div>
-      <div class="display-4 text-center mb-4">X is what % of Y?</div>
-      <div
-        class="text-center jumbotron form-inline d-flex justify-content-center flex-column"
-        style="padding: 2rem;"
-      >
-        <div>
-          <input type="text" id="firstInput" class="form-control" />
-          <span class="px-4">is what % of</span>
-          <input type="text" id="secondInput" class="form-control mr-2" />
+    <div class="wrapper">    
+      <div class="container text-center d-flex justify-content-center align-items-center flex-column">
+        <h1 class="display-3 text-center text-danger">
+          Percentage Calculate
+        </h1>
+        <p class="lead text-center mb-4">X is what percentage(%) of Y 🙂?</p>
+        
+        <div class="text-center jumbotron form-inline d-flex justify-content-center flex-column mt-4">
+          <form class="formPercentage">
+            <div class="inputFields">
+              <input type="text" id="firstInput" class="form-control form-control-lg" placeholder="'X' Value" />
+              <span class="px-4">is what percentage(%) of</span>
+              <input type="text" id="secondInput" class="form-control form-control-lg" placeholder="'Y' Value" />
+            </div>
+            <input type="submit" class="btn btn-danger mt-4 mb-2" value="Calculate the Percentage">            
+          </form>
+          <div class="answer"> </div>
         </div>
-        <div>
-          <button class="btn btn-danger mt-4 mb-2" onclick="getAnswer()">
-            Calculate the Percentage
-          </button>
-        </div>
-        <div class="text-center" style="font-size: 24px; font-weight: 300;" id="placeholder">
-          Get Answer Here 
-        </div>
-        <span id="res" style="font-size: 24px; font-weight: 600;"></span>
+
       </div>
     </div>
-
-    <script src="main.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
