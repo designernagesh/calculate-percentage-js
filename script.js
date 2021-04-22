@@ -1,9 +1,10 @@
 let formPercentage = document.querySelector(".formPercentage"),
     firstInput = document.getElementById("firstInput"),
-    secondInput = document.getElementById("secondInput");
+    secondInput = document.getElementById("secondInput"),
+    error = document.querySelector('.error');
 
-formPercentage.addEventListener('submit', (event) => {
-    event.preventDefault();
+formPercentage.addEventListener('submit', e => {
+    e.preventDefault();
     
     let firstInputValue = parseFloat(firstInput.value);
     let secondInputValue = parseFloat(secondInput.value);
@@ -12,7 +13,8 @@ formPercentage.addEventListener('submit', (event) => {
         document.querySelector(".answer").innerHTML = `Answer: <span>${firstInputValue}</span> is the <span>${answer}</span> % of <span>${secondInputValue}</span>`;
     }
     else{
-        alert("Fill the Fields");
+        error.classList.add('mb-3', 'text-danger');
+        error.textContent = "Please, fill the fields to calculate the Percentage.";        
     }
     firstInput.value = "";
     secondInput.value = "";
